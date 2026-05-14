@@ -74,27 +74,6 @@ export function Hero() {
             </a>
           </motion.div>
         </div>
-
-        {/* Quick Stats Grid */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20"
-        >
-          {[
-            { label: 'Visas Approved', value: '5,000+', icon: Globe },
-            { label: 'Happy Clients', value: '10k+', icon: ShieldCheck },
-            { label: 'Years Experience', value: '8+', icon: MapPin },
-            { label: 'Global Destinations', value: '150+', icon: Plane },
-          ].map((stat, i) => (
-            <div key={i} className="glass-panel rounded-xl p-6 text-white text-center sm:text-left shadow-2xl">
-              <stat.icon className="w-8 h-8 text-savannah mb-4 mx-auto sm:mx-0" />
-              <div className="text-3xl font-display font-bold mb-1">{stat.value}</div>
-              <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

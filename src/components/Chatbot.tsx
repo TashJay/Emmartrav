@@ -81,9 +81,10 @@ export function Chatbot() {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "fixed bottom-6 right-6 p-4 rounded-full bg-kenya-green text-white shadow-2xl hover:bg-green-800 transition-all z-50",
-          isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100 bounce-animation"
+          "fixed bottom-6 right-6 p-4 rounded-full bg-kenya-green text-white shadow-2xl hover:bg-green-800 transition-all z-[100]",
+          isOpen ? "scale-0 opacity-0 pointer-events-none" : "scale-100 opacity-100 bounce-animation"
         )}
+        aria-label="Open chat"
       >
         <MessageSquare className="w-6 h-6" />
       </button>
@@ -95,7 +96,7 @@ export function Chatbot() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-6 right-6 w-[350px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 flex flex-col overflow-hidden"
+            className="fixed bottom-4 right-4 left-4 sm:left-auto sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-[100] flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-kenya-red p-4 text-white flex justify-between items-center">
@@ -108,9 +109,13 @@ export function Chatbot() {
                   <p className="text-xs text-white/70">Online</p>
                 </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white">
+              <button 
+                onClick={() => setIsOpen(false)} 
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                aria-label="Close chat"
+              >
                 <X className="w-5 h-5" />
-            </button>
+              </button>
             </div>
 
             {/* Messages */}
