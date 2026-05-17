@@ -10,12 +10,12 @@ export function About() {
           <div className="grid grid-cols-2 gap-4 relative">
             <div className="absolute -inset-4 bg-kenya-red/5 rounded-3xl -z-10" />
             <img 
-              src="https://images.unsplash.com/photo-1549420959-1e24fb2fca25?auto=format&fit=crop&q=80&w=800" 
+              src="/images/kenyan_landscape.png" 
               alt="Nairobi skyline" 
               className="rounded-2xl w-full h-[300px] object-cover mt-8 shadow-xl"
             />
             <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a6150ed1882?auto=format&fit=crop&q=80&w=800" 
+              src="/images/travel_agency_desk.png" 
               alt="Airplane in sky" 
               className="rounded-2xl w-full h-[300px] object-cover shadow-xl"
             />
